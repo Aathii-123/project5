@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student ={name:"anu", Age:12, display:function(){
+        console.log(`Name ${this.name}`)
+        console.log(`Age ${this.Age}`)
+        }}
+        console.log(student)
+        student.display()
+        let array2=[12,13,14]
+        console.log(array2)
+        function arrayAverage(array2){
+    //Find the sum
+    var sum = 0;
+    for(var i in array2) {
+        sum += array2[i];
+    }
+    //Get the length of the array
+    var numbersCnt = array2.length;
+    //Return the average / mean.
+    return (sum / numbersCnt);
+}
+console.log(arrayAverage(array2))
+        
+    </script>
+</body>
+</html>

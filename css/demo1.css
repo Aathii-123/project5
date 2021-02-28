@@ -1,0 +1,12 @@
+.tb1 {
+    border-collapse:collapse;
+}
+.row1{
+    background-color: gray;
+}
+.rowcls:hover{
+    background-color: black;
+}
+.rowcls:hover{
+    background-color: blue;
+}

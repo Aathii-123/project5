@@ -1,0 +1,15 @@
+.tb1{
+    border-collapse:collapse; 
+ }
+ .tHeader{
+     background-color: brown;
+ }
+ .tHeader:hover{
+     background-color: goldenrod;
+ }
+ .rowcls:nth-child(even){
+     background-color: indigo;
+ }
+ .rowcls:hover:nth-child(odd){
+     background-color:green;
+ }

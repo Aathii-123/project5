@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//  \s=> whitespace
+//  \d=>[0-9] [156]
+//  \w=> [a-z A-Z 0-9]
+//  \W=> non-word characters
+//  \D=> non-digits
+//  \d{5} or [0-9]{5}
+//  \d{3,10}
+//  \d{3,}
+//  \d+ 1 or more  occurance
+//  \d* 0 or more  occurance
+function check(){
+//let regEx=/^[a-z]{3}\d{2}$/
+// for mobilenumber begin with 987=> let regEx=/^[9][8][7]\d{7}$/
+let regEx=/^\+91\s(987|789)\d{7}$/g
+
+let data=document.getElementById('data').value
+//alert(data.match(regEx))
+if (regEx.test(data)){
+    alert("valid mobile number")
+}
+else{
+    alert("invalid mobile number")
+}
+}
+    </script>
+    <input type="text" id=data>
+    <button onclick="check()">click here</button>
+</body>
+</html>

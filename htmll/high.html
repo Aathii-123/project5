@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    textarea {
+        margin: 0;
+        border-radius: 0;
+      }
+      .backdrop {
+  overflow: auto;
+}
+
+.highlights {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.textarea1 {
+  color: #444; /* or whatever */
+  background-color: transparent;
+}
+
+.highlights {
+  color: transparent;
+}
+
+mark {
+  color: transparent;
+  background-color: #d4e9ab; /* or whatever */
+}
+
+.backdrop {
+  background-color: #fff; /* or whatever */
+}
+</style>
+</head>
+<body>
+    <script>
+        var textarea1
+  
+
+
+function handleInput() {
+    
+  var text = $textarea1.val();
+  var highlightedText = applyHighlights(text);
+  $highlights.html(highlightedText);
+}
+function applyHighlights(text) {
+  return text
+    .replace(/\n$/g, '\n\n')
+    .replace(/[A-Z].*?\b/g, '<mark></mark>');
+}
+function handleScroll() {
+  var scrollTop = $textarea1.scrollTop();
+  $backdrop.scrollTop(scrollTop);
+}
+    </script>
+    <div class="container">
+        <div class="backdrop">
+          <div class="highlights">
+            <!-- cloned text with <mark> tags here -->
+          </div>
+        </div>
+        <textarea name="textarea1" id="content" cols="30" rows="10"></textarea>
+        <input type="text" name="textarea1" id="word">
+    <button onclick="">search</button>
+          <!-- user input here -->
+        
+      </div>
+</body>
+</html>
